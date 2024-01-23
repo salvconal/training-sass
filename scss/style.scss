@@ -3,10 +3,25 @@
 @import "./mixins";
 @import "./maps";
 @import "./functions";
+@import "./lists";
 // Generics
-
 :root {
     font-size: 0.785rem;
     box-sizing: border-box;
-
+}
+body{
+    background-color: $bg-color;
+    padding-top: nth($padding, -1 );
+     padding: nth($padding, -1 ) nth($padding, 3 );
+    .main{
+        width: 80%;
+        border: 1px solid $dark;
+        border-radius: $br-1;
+        padding: 1em 2em;
+        margin: 2em auto;
+        margin-top: $mt-3;
+        background-image:url($path);
+        background-position: center center;
+        background-size: cover;
+    }
 }

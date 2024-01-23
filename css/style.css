@@ -11,4 +11,21 @@
 :root {
   font-size: 0.785rem;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #198754;
+  padding-top: 3em;
+  padding: 3em 1em;
+}
+body .main {
+  width: 80%;
+  border: 1px solid #292a2b;
+  border-radius: 0.3rem;
+  padding: 1em 2em;
+  margin: 2em auto;
+  margin-top: 5em;
+  background-image: url("../img/img11.jpg");
+  background-position: center center;
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */
