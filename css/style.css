@@ -1,3 +1,14 @@
-body {
-  background-color: darkgreen;
+/*reset*/
+*, *::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: inherit;
+  outline: 0 none;
+}
+
+:root {
+  font-size: 0.785rem;
+  box-sizing: border-box;
 }/*# sourceMappingURL=style.css.map */
