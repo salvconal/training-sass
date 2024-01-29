@@ -6,17 +6,49 @@
   border: 0;
   box-sizing: inherit;
   outline: 0 none;
+  list-style: none;
 }
 
 :root {
-  font-size: 0.785rem;
+  font-size: 1rem;
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: value;
+}
+
+h2 {
+  font-size: value;
+}
+
+h3 {
+  font-size: value;
+}
+
+h4 {
+  font-size: value;
+}
+
+h5 {
+  font-size: value;
+}
+
+h6 {
+  font-size: value;
 }
 
 body {
   background-color: #198754;
-  padding-top: 3em;
-  padding: 3em 1em;
+  padding: 1em 3em;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+body.light {
+  background-color: #aff0d2;
+}
+body.light p {
+  color: #051b11 !important;
 }
 body .main {
   width: 80%;
@@ -24,8 +56,81 @@ body .main {
   border-radius: 0.3rem;
   padding: 1em 2em;
   margin: 2em auto;
+  margin-top: 30px;
   margin-top: 5em;
-  background-image: url("../img/img11.jpg");
+  background-image: url("../img/img11.jpg.jpg");
   background-position: center center;
   background-size: cover;
+}
+body .main-header {
+  font-size: 3.5rem;
+  font-weight: 900;
+  font-family: "Titillium Web", sans-serif;
+  transition: color 0.3s ease-in-out;
+}
+body .main-header:hover {
+  color: #dc3545;
+}
+body .message, body .message-sucess, body .message-warning, body .message-danger, body .message-info {
+  padding: 0.5em 5em;
+  border-radius: 0.3rem;
+  width: 70%;
+  margin: 1em auto;
+}
+body .message-info {
+  color: #013889;
+  background-color: #408cfd;
+  border: 1px solid #0d6efd;
+}
+body .message-danger {
+  color: #7c151f;
+  background-color: #e4606d;
+  border: 1px solid #dc3545;
+}
+body .message-warning {
+  color: #876500;
+  background-color: #ffce3a;
+  border: 1px solid #ffc107;
+}
+body .message-sucess {
+  color: #051b11;
+  background-color: #21b26f;
+  border: 1px solid #198754;
+}
+body header {
+  background-color: #292a2b;
+  padding: 0.25em 0.5em;
+}
+body header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body header ul li {
+  background-color: yellow;
+  padding: 0.5em 1em;
+  border-radius: 0.2rem;
+}
+body header ul li a {
+  color: #101111;
+}
+body p {
+  padding: 0.5em 1em;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+}
+body p:nth-child(1) {
+  background-color: #6f42c1;
+}
+body p:nth-child(2) {
+  background-color: #0dcaf0;
+}
+body p:nth-child(3) {
+  background-color: #198754;
+}
+body p:nth-child(4) {
+  background-color: #ffc107;
+}
+body p:nth-child(5) {
+  background-color: #fd7e14;
 }/*# sourceMappingURL=style.css.map */

@@ -15,17 +15,23 @@ $grey_light: #CCCCCC;
 $gray: #adb5bd;
 $green-white: #edf4eb;
 $dark-green: darkolivegreen;
+//ancho y alto para el viewport.
 $full-width: 100vw;
 $full-height: 100vh;
+//Probamos las posibilades de Sass en la creacion de variables
 $bg-color: $green;
 $br-1: .3rem;
 $border-width: "1px";
 $border-style: "solid";
 $border-color: $dark;
-//concatenar streams
+//Ruta estandar para las imagenes
 $base-path: "../img/";
-$file-name: "img11.jpg";
-$path : $base-path + $file-name;
+
+
 //valores numericos
 $margin-top: 30 * 1px;
 $mt-3: 5 * 1em;
+$mt-2:_3 em;
+//Fuentes
+$rubik: 'Rubik', sans-serif;
+$titillium:'Titillium Web', sans-serif;

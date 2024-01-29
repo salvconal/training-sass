@@ -4,24 +4,132 @@
 @import "./maps";
 @import "./functions";
 @import "./lists";
+
+
 // Generics
 :root {
-    font-size: 0.785rem;
+    font-size: fs("medium");
     box-sizing: border-box;
 }
-body{
+
+//crea en el style.css una lista para los encabezados 
+@each $header, $value in $header-sizes {
+
+    #{$header} {
+        font-size: #{value};
+    }
+}
+
+$header: "";
+$start: 1;
+$end: 6;
+
+@while $start <= $end{
+    $headers: $headers + #{$start} + ", ";
+    $start: $start + 1;
+}
+#{$headers}{
+    font-family: getFont(false);
+}
+
+
+body {
+    &.light {
+        @include theme();
+    }
+
     background-color: $bg-color;
-    padding-top: nth($padding, -1 );
-     padding: nth($padding, -1 ) nth($padding, 3 );
-    .main{
+    padding: getPadding(3) getPadding(-1);
+    font-family: getFont(true);
+    font-weight: rfw("Regular");
+
+
+
+
+
+
+    .main {
         width: 80%;
         border: 1px solid $dark;
         border-radius: $br-1;
         padding: 1em 2em;
         margin: 2em auto;
+        margin-top: $margin-top;
         margin-top: $mt-3;
-        background-image:url($path);
+        background-image: url(getImg("img11.jpg", "jpg"));
         background-position: center center;
         background-size: cover;
+
+        &-header {
+            font-size: fs("xx-large");
+            font-weight: tfw("Black");
+            font-family: getFont(false);
+            transition: color .3s ease-in-out;
+
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+
+    .message {
+        padding: getPadding(2) getPadding(4);
+        border-radius: getRadius(2);
+        width: 70%;
+        margin: 1em auto;
+    }
+
+    .message-info {
+        //Para replicar los mismos detalles(mirar css)
+        @extend .message;
+        @include color-theme($blue);
+    }
+
+    .message-danger {
+        @extend .message;
+        @include color-theme($red);
+    }
+
+    .message-warning {
+        @extend .message;
+        @include color-theme($yellow);
+    }
+
+    .message-sucess {
+        @extend .message;
+        @include color-theme($green);
+    }
+
+    header {
+        background-color: $dark;
+        padding: getPadding(1) getPadding(2);
+
+        ul {
+            @include flex-center(space-between);
+
+            li {
+                background-color: yellow;
+                padding: getPadding(2) getPadding(3);
+
+                border-radius: getRadius(1);
+
+                a {
+                    color: darken($color: $dark, $amount: 10%)
+                }
+            }
+        }
+    }
+
+    p {
+        padding: getPadding(2) getPadding(3);
+        border-radius: getRadius(2);
+        font-size: fs("medium");
+
+        @for $value from 1 through length($raimbow) {
+            &:nth-child(#{$value}) {
+                background-color: getRcolor($value);
+            }
+
+        }
     }
 }
